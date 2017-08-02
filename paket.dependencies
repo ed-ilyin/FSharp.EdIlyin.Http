@@ -1,0 +1,8 @@
+redirects: on
+framework: net461
+source https://api.nuget.org/v3/index.json
+
+nuget FAKE
+nuget FSharp.Data
+nuget FSharp.EdIlyin.Core
+nuget Hopac

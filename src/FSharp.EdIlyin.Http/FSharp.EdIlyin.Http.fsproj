@@ -1,18 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup Label="Globals">
-    <ProjectGuid>3cdf45bf-f644-400b-8104-4e9c53c543da</ProjectGuid>
-  </PropertyGroup>
+<Project Sdk="FSharp.NET.Sdk;Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.2</Version>
-    <TargetFrameworks>net461;net462</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net461</TargetFramework>
+    <DebugType>portable</DebugType>
+    <Version>1.0.3</Version>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Response.fs" />
     <Compile Include="Request.fs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FSharp.Data" Version="2.3.3" />
-    <PackageReference Include="FSharp.EdIlyin.Core" Version="1.0.6" />
-    <PackageReference Include="Hopac" Version="0.3.23" />
+    <PackageReference Include="FSharp.NET.Sdk" Version="1.0.5" PrivateAssets="All" />
   </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

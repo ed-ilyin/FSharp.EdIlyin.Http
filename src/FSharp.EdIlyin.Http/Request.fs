@@ -54,7 +54,7 @@ let postJson parser endpoint connection json =
 let addJsonUtf8ContentType headers =
     headers
         |> Map.ofList
-        |> uncurry Map.add
+        |> flip (||>) Map.add
             (HttpRequestHeaders.ContentType
                 "application/json; charset=UTF-8"
             )
@@ -86,7 +86,7 @@ let putJson parser endpoint connection json =
 
 
 let put parser endpoint connection =
-    Json.Encode.null' |> putJson parser endpoint connection
+    Json.Encode.``null`` |> putJson parser endpoint connection
 
 
 let delete decoder endpoint connection =
