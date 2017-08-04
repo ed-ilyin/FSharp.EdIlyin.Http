@@ -3,7 +3,7 @@
     <OutputType>Library</OutputType>
     <TargetFramework>net461</TargetFramework>
     <DebugType>portable</DebugType>
-    <Version>1.0.3</Version>
+    <Version>1.0.5</Version>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Response.fs" />

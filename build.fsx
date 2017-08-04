@@ -336,6 +336,15 @@ let clean () =
     !! "src/**/bin" ++ "src/**/obj"
     |> CleanDirs
 
+let restore _ = Util.run "" dotnetExePath "restore"
+
+Target "Update" (fun _ ->
+    Util.run "" ".paket/paket.exe" "update"
+    restore ()
+)
+
+Target "Restore" restore
+
 let needsPublishing (versionRegex: Regex) (releaseNotes: ReleaseNotes) projFile =
     printfn "Project: %s" projFile
     if releaseNotes.NugetVersion.ToUpper().EndsWith("NEXT")
@@ -387,7 +396,7 @@ Target "Clean" clean
 Target "Build" (fun () ->
     installDotnetSdk ()
     clean ()
-    Util.run null dotnetExePath "restore"
+    restore ()
     for pkg in packages do
         let projFile = __SOURCE_DIRECTORY__ </> (pkg + ".fsproj")
         let projDir = Path.GetDirectoryName(projFile)
@@ -407,6 +416,9 @@ let publishPackages () =
 
 Target "PublishPackages" publishPackages
 Target "PublishPackage" publishPackages
+Target "Release" DoNothing
+
+"PublishPackage" ==> "Release"
 
 // Start build
 RunTargetOrDefault "Build"

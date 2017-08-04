@@ -86,7 +86,7 @@ let putJson parser endpoint connection json =
 
 
 let put parser endpoint connection =
-    Json.Encode.``null`` |> putJson parser endpoint connection
+    Json.Encode.Null |> putJson parser endpoint connection
 
 
 let delete decoder endpoint connection =
