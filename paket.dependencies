@@ -5,4 +5,4 @@ source https://api.nuget.org/v3/index.json
 nuget FAKE
 nuget FSharp.Data
 nuget FSharp.EdIlyin.Core
-nuget FSharp.Core ~> 4.0.0
+nuget FSharp.Core ~> 4.0.1.7-alpha
