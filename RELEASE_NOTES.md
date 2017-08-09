@@ -1,3 +1,6 @@
+### 1.1.1
+* adds Response.statusCode200BodyText
+
 ### 1.1.0
 * move to ProjectScaffold
 

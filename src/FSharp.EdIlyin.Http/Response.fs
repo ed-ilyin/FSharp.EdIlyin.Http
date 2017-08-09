@@ -46,3 +46,9 @@ let unpack parser async =
 
         return result
     }
+
+
+let statusCode200BodyText decoder =
+    Decode.map2 second (statusCode 200) bodyText
+        |> Decode.andThen
+            (Json.Decode.decodeString decoder >> Decode.fromResult)
