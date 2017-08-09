@@ -1,3 +1,7 @@
+### 1.1.2
+* adds Response.statusCode200Json
+* changes Response.statusCode200BodyText to accept function
+
 ### 1.1.1
 * adds Response.statusCode200BodyText
 

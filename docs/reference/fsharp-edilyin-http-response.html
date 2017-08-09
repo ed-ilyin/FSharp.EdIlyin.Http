@@ -90,10 +90,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            statusCode200BodyText decoder
+            statusCode200BodyText func
           </code>
           <div class="tip" id="12">
-            <strong>Signature:</strong> decoder:Decoder&lt;Json,&#39;?7570&gt; -&gt; Decoder&lt;HttpResponse,&#39;?7570&gt;<br />
+            <strong>Signature:</strong> func:(string -&gt; &#39;?7570) -&gt; Decoder&lt;HttpResponse,&#39;?7570&gt;<br />
                           <strong>Type parameters:</strong> '?7570          </div>
         </td>
         <td class="xmldoc">
@@ -108,9 +108,27 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
-            unpack parser async
+            statusCode200Json decoder
           </code>
           <div class="tip" id="13">
+            <strong>Signature:</strong> decoder:Decoder&lt;Json,&#39;?7572&gt; -&gt; Decoder&lt;HttpResponse,&#39;?7572&gt;<br />
+                          <strong>Type parameters:</strong> '?7572          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/ed-ilyin/FSharp.EdIlyin.Http/tree/master/src/FSharp.EdIlyin.Http/Response.fs#L55-55" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+            unpack parser async
+          </code>
+          <div class="tip" id="14">
             <strong>Signature:</strong> parser:Decoder&lt;HttpResponse,&#39;b&gt; -&gt; async:Async&lt;HttpResponse&gt; -&gt; Boxcar&lt;&#39;b&gt;<br />
                           <strong>Type parameters:</strong> 'b          </div>
         </td>
