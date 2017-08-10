@@ -8,7 +8,7 @@ NUGET
     FParsec (1.0.2)
     FSharp.Core (4.0.0.1) - redirects: force
     FSharp.Data (2.3.3)
-    FSharp.EdIlyin.Core (1.1.4)
+    FSharp.EdIlyin.Core (1.1.9)
       Chiron
       Hopac
     Hopac (0.3.23)
