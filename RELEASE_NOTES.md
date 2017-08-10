@@ -1,4 +1,7 @@
-### 1.1.3
+### 1.1.4
+* FSharp.EdIlyin.Core 1.1.2
+
+#### 1.1.3
 * update of FSharp.EdIlyin.Core 1.1.1
 
 #### 1.1.2
