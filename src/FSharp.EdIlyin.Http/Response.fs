@@ -11,7 +11,7 @@ let statusCode expecting =
     Decode.primitive label
         (fun (r:Data.HttpResponse) ->
             let sc = r.StatusCode
-            if sc = expecting then Decode.decoded sc
+            if sc = expecting then Ok sc
             else Decode.expectingButGot label r
         )
 
@@ -23,7 +23,7 @@ let bodyText =
         (fun (r:Data.HttpResponse) ->
             match r.Body with
                 | Data.Binary _ -> Decode.expectingButGot label r
-                | Data.Text text -> Decode.decoded text
+                | Data.Text text -> Ok text
         )
 
 
