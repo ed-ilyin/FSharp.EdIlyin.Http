@@ -33,15 +33,8 @@ let unpack parser async =
             Job.fromAsync async |> Boxcar.catch
 
         let! result =
-            try
-                do printfn "Response %i from %s"
-                    response.StatusCode
-                    response.ResponseUrl
-
-                Decode.decode parser response
-
-            with | exn ->
-                sprintf "%s\n%A" exn.Message response |> Error
+            try Decode.decode parser response
+            with exn -> sprintf "%s\n%A" exn.Message response |> Error
             |> Boxcar.fromResult
 
         return result
