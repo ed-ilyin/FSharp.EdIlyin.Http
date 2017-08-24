@@ -1,4 +1,7 @@
-### 1.1.7
+### 1.1.8
+* FSharp.EdIlyin.Core 1.1.11
+
+#### 1.1.7
 * removes printfn from response
 * FSharp.EdIlyin.Core 1.1.10
 
